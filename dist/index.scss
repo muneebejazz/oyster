@@ -1,0 +1,14 @@
+//variables and functions
+@import "variables";
+
+//base layout style scss
+@import "base";
+@import "breakpoints.scss";
+//componenets (button, card, navbar )
+@import "components/card";
+@import "components/buttons";
+@import "components/navbar";
+
+//utilities (margin,padding, opacity etc.)
+@import "utilities";
+@import "grid";

@@ -1,0 +1,40 @@
+//colors
+@use "sass:map";
+
+$colors: (
+  "primary": blue,
+  "secondary": green,
+  "blue": rgb(66, 66, 248),
+  "danger": red,
+  "success": green,
+  "warning": red,
+  "dark": black,
+  "white": white,
+  "info": yellow,
+);
+
+@each $key, $value in $colors {
+  @for $i from 1 through 10 {
+    $colors: map.set($colors, #{$key}-lt-#{$i}, lighten($value, $i * 5));
+  }
+}
+
+//padding
+$base_padding: 0.75rem;
+
+//margin
+$base_margin: 0.75rem;
+
+//borders
+$base_border_thickness: 1px;
+$base_border_radius: 20px;
+
+//box shadow
+
+//font size
+$base_font_size: 1rem;
+$font_size_sm: $base_font_size * 0.75;
+$font_size_md: $base_font_size * 1.2;
+$font_size_lg: $base_font_size * 1.5;
+$font_size_xl: $base_font_size * 1.75;
+$font_size_xxl: $base_font_size * 2.25;

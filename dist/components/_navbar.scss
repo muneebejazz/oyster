@@ -1,0 +1,74 @@
+// navbars goes here ////////////
+// simple navbar     ///////////
+// sidebar navbar    ///////////
+
+.navbar {
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  display: flex;
+  align-items: center;
+  .brand-logo {
+    font-size: $font-size-xl;
+    font-weight: bold;
+  }
+  a {
+    //remove all the underline text
+    color: map-get($colors, "primary");
+    text-decoration: none;
+  }
+  .navbar-toggle {
+    cursor: pointer;
+    .navbar-bar {
+      width: 40px;
+      height: 10px;
+      display: block;
+      background-color: map-get($colors, "dark");
+      margin: 8px;
+    }
+  }
+  .navbar-menu {
+    position: auto;
+    display: none;
+  }
+  .navbar-menu ul {
+    list-style-type: none;
+    display: flex;
+  }
+  .navbar-menu ul li a {
+    background-color: black;
+    padding: 10px 20px;
+  }
+}
+@include xs {
+  .navbar-menu {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .navbar-menu.active {
+    display: flex;
+  }
+}
+
+//display none nav-menu on the mobile view
+@include lg {
+  //hide the menu icon from the navbar lg and up
+  .navbar-toggle {
+    display: none;
+  }
+  .navbar-menu {
+    display: block;
+    position: relative;
+    height: auto;
+    width: auto;
+    .navbar-close-btn {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@use "sass:math";
+
+.card {
+  display: block;
+  padding: $base-padding;
+  border: $base-border-thickness solid rgb(230, 230, 230);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: math.div($base-border-radius, 4);
+}

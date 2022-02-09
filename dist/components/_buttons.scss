@@ -1,0 +1,15 @@
+@each $key, $val in $colors {
+  .btn-outline-#{$key} {
+    display: inline-block;
+    color: black;
+    border: 0.5px solid $val;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: 0.3s all;
+    &:hover {
+      background-color: $val;
+      color: white;
+    }
+  }
+} ;

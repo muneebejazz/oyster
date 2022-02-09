@@ -1,0 +1,20 @@
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+$fonts-family: "Montserrat", "Roboto";
+
+//font family classes
+@each $ff in $fonts-family {
+  .#{$ff} {
+    font-family: $ff;
+  }
+}
+
+@each $key, $value in $colors {
+  .text-#{$key} {
+    color: $value;
+  }
+  .bg-#{$key} {
+    background-color: $value;
+  }
+}
